@@ -1,0 +1,24 @@
+class Calificaciones():
+	def __init__(self):
+		self.c1 =0
+		self.c2 =0
+		self.c3 =0 
+		self.n = ""
+	def prom(self):
+		r= (self.c1+self.c2+self.c3)/3
+		return r
+	def comparacion(self,num):
+		if num > 70 :
+			rs="Aprobado"
+		else:
+			rs="Reprobado"
+		return rs
+cal= Calificaciones()	
+cal.n= input("Escribe nombre ")	
+cal.c1=float(input("Escribe la primera calificacion "))
+cal.c2=float(input("Escribe la primera calificacion "))
+cal.c3=float(input("Escribe la primera calificacion "))
+#cal.comparacion(cal.prom())
+p = cal.comparacion()
+c = cal.comparacion(p)
+print(cal.n,"con calificaciones: ",cal.c1," ",cal.c2," ", cal.c3,"su promedio es ", p,"es ",c)
